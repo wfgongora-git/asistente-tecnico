@@ -30,10 +30,8 @@ El flujo de datos sigue el siguiente proceso:
 2.  **Acceso:** **Cloudflare Tunnel** recibe el webhook y lo redirige seguramente al contenedor local.
 3.  **Orquestación (n8n):**
     * **Trigger:** Recibe el mensaje.
-    * **Rate Limit:** Verifica que el usuario no exceda el límite de consultas.
-    * **AI Agent:** Procesa el texto usando el modelo **Google Gemini**.
+    * **AI Agent:** Procesa el texto usando el modelo **ChatGPT 4 mini**.
     * **Logging:** Guarda la consulta y la respuesta en **PostgreSQL**.
-    * **Enriquecimiento:** Formatea la respuesta y añade recursos estáticos si es necesario.
     * **Entrega:** Divide la respuesta si es muy larga y la envía a Telegram.
 4.  **Monitoreo:** **Grafana** lee la base de datos y actualiza los dashboards de uso.
 
