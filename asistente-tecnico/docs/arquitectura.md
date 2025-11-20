@@ -1,3 +1,30 @@
+# Arquitectura del Chatbot de Telegram
+
+## Descripción General
+
+Este diagrama representa la arquitectura del flujo de n8n que implementa un chatbot conversacional con memoria persistente.
+
+## Componentes Principales
+
+### 1. Entrada
+El bot de Telegram recibe mensajes de los usuarios.
+
+### 2. Procesamiento Central
+- **Telegram Trigger**: Captura los mensajes entrantes
+- **AI Agent**: Procesa las solicitudes utilizando un modelo de OpenAI y mantiene el contexto de la conversación en PostgreSQL
+
+### 3. Acciones Secuenciales
+- Inserción de datos en PostgreSQL
+- Procesamiento con código JavaScript personalizado
+- Envío de respuesta al usuario vía Telegram
+
+### 4. Salida
+El mensaje procesado se envía de vuelta al usuario en Telegram.
+
+## Características del Flujo
+
+El flujo está diseñado como un chatbot conversacional con memoria persistente que puede ejecutar acciones como guardar información en base de datos y procesar lógica personalizada antes de responder.
+
 ```mermaid
 graph TB
     subgraph "Entrada"
@@ -44,25 +71,3 @@ graph TB
     style TG fill:#0088cc
     style TG_OUT fill:#0088cc
 ```
-
-Arquitectura del flujo de n8n para el asistente de soporte:
-
-Componentes principales:
-
-Entrada: El bot de Telegram recibe mensajes de los usuarios
-Procesamiento central:
-
-El Telegram Trigger captura los mensajes entrantes
-El AI Agent procesa las solicitudes utilizando un modelo de OpenAI y mantiene el contexto de la conversación en PostgreSQL
-
-
-Acciones secuenciales:
-
-Inserción de datos en PostgreSQL
-Procesamiento con código JavaScript personalizado
-Envío de respuesta al usuario via Telegram
-
-
-Salida: El mensaje procesado se envía de vuelta al usuario en Telegram
-
-El flujo está diseñado como un chatbot conversacional con memoria persistente que puede ejecutar acciones como guardar información en base de datos y procesar lógica personalizada antes de responder.
