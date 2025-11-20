@@ -15,7 +15,7 @@ Desplegado sobre una arquitectura de **microservicios en Docker**, este bot es c
 
 * **🧠 Inteligencia Artificial Generativa:** Utiliza **Google Gemini** para interpretar la intención del usuario y generar respuestas técnicas precisas paso a paso.
 * **🌍 Soporte Bilingüe:** Detecta y responde automáticamente en el idioma del usuario (EN/ES) sin configuración adicional.
-* **🛡️ Infraestructura Robusta:** Implementa **Rate Limiting** para prevenir spam y maneja división de mensajes largos (Chunking) para cumplir con los límites de Telegram.
+* **🛡️ Infraestructura Robusta:** Maneja división de mensajes largos (Chunking) para cumplir con los límites de Telegram.
 * **📊 Auditoría y Métricas:** Cada interacción (pregunta/respuesta) se registra automáticamente en **PostgreSQL** y se visualiza en **Grafana**.
 * **🔒 Acceso Seguro:** Expuesto a internet mediante **Cloudflare Tunnel**, manteniendo la seguridad de la red local sin abrir puertos.
 * **⚡ Despliegue Simplificado:** Todo el stack se levanta con un único comando de `docker compose`.
