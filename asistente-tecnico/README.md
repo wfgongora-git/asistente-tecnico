@@ -67,9 +67,11 @@ tech-assist-bot/
     ├── postgres_data/
     ├── pgadmin_data/
     └── grafana_data/
+```
 
-##Dashboard Usando Grafana##
-http://dash.wfgongora.work/dashboard/snapshot/FFR1p60ykiZSRz9O95zT0MHFHbrN5GeX
+##  Dashboard Usando Grafana 
+
+ [Dashboard] [(http://dash.wfgongora.work/dashboard/snapshot/FFR1p60ykiZSRz9O95zT0MHFHbrN5GeX)]
 
 
 ## 🤝 Contribuciones
