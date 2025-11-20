@@ -13,7 +13,7 @@ El proyecto cumple con los siguientes requisitos funcionales y técnicos:
 | Componente | Tecnología | Propósito |
 | :--- | :--- | :--- |
 | **Orquestación** | `n8n` | Flujo de trabajo y lógica del Agente de IA. |
-| **Modelo Base** | `OpenAI` | Inteligencia y capacidad de respuesta bilingüe. |
+| **Modelo Base** | `Gpt-5 mini` | Inteligencia y capacidad de respuesta bilingüe. |
 | **Base de Conocimiento** | `PostgreSQL Chat Memory` | Recuerda las conversaciones de cada chat ID |
 | **Mensajería** | `Telegram API` | Interfaz de usuario final. |
 | **Visualización** | `Grafana` | Métricas y auditoría de uso del bot. |
