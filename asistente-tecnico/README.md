@@ -68,6 +68,10 @@ tech-assist-bot/
     ├── pgadmin_data/
     └── grafana_data/
 
+##Dashboard Usando Grafana##
+http://dash.wfgongora.work/dashboard/snapshot/FFR1p60ykiZSRz9O95zT0MHFHbrN5GeX
+
+
 ## 🤝 Contribuciones
 
 Para reportar bugs o sugerir mejoras, por favor abra un *Issue*.
