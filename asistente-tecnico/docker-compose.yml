@@ -1,0 +1,53 @@
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    container_name: n8n
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=n8n.wfgongora.work
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=https
+      - WEBHOOK_URL=https://n8n.wfgongora.work/
+      - GENERIC_TIMEZONE=America/Bogota
+    volumes:
+      - ./n8n_data:/home/node/.n8n
+      - ./local_files:/files
+  postgres:
+    image: postgres:14-alpine
+    container_name: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: n8n_user
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: audit_db
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: wfgongora@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: wfgongora@gmail.com
+      PGADMIN_LISTEN_PORT: 80
+    volumes:
+      - ./pgadmin_data:/var/lib/pgadmin
+  grafana:
+    image: grafana/grafana-oss
+    container_name: grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana_data:/var/lib/grafana
+    user: "472"
+    environment:
+      GF_SECURITY_ADMIN_USER: wfgongora@gmail.com
+      GF_SECURITY_ADMIN_PASSWORD: mysecretpassword
